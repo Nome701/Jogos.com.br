@@ -1,147 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jogos Online</title>
-  <style>
-    :root{
-      --primary:#1e88e5;
-      --card-bg:#fff;
-      --page-bg:#f4f4f4;
-      --text:#333;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:var(--page-bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-    }
-
-    header{
-      background:var(--primary);
-      color:#fff;
-      padding:20px;
-      text-align:center;
-    }
-    header h1{margin:0;font-size:1.6rem}
-    nav{margin-top:10px}
-    nav a{color:#fff;margin:0 8px;text-decoration:none;font-weight:700}
-    nav a:hover{text-decoration:underline}
-
-    main{max-width:1200px;margin:20px auto;padding:0 12px}
-
-    .container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:20px;
-    }
-
-    .card{
-      background:var(--card-bg);
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      display:flex;
-      flex-direction:column;
-    }
-    .card img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      display:block;
-    }
-    .card-content{
-      padding:15px;
-      flex:1;
-    }
-    .card-content h2{margin:0 0 10px;font-size:1.15rem;color:#111}
-    .card-content p{margin:0;color:#555;line-height:1.4}
-
-    .btn{
-      display:block;
-      text-align:center;
-      background:var(--primary);
-      color:#fff;
-      padding:12px 10px;
-      text-decoration:none;
-      font-weight:700;
-      border-radius:0 0 10px 10px;
-    }
-    .btn:hover{background:#1565c0}
-
-    footer{
-      text-align:center;
-      padding:18px 10px;
-      color:#666;
-      font-size:0.9rem;
-      margin-top:24px;
-    }
-
-    /* responsivo: reduzir altura da imagem em telas pequenas */
-    @media (max-width:420px){
-      .card img{height:160px}
-      header h1{font-size:1.25rem}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogos Online</title>
+    <style>
+        :root {
+            --primary: #1080e5;
+            --card-bg: #fff;
+            --page-bg: #f4f4f4;
+            --text: #333;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--page-bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 8px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 12px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 15px;
+            flex: 1;
+        }
+        .card-content h2 {
+            margin: 0 0 10px;
+            font-size: 1.15rem;
+            color: #111;
+        }
+        .card-content p {
+            margin: 0 0 15px;
+            color: #555;
+            line-height: 1.4;
+        }
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 10px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 0 0 10px 10px;
+        }
+        .btn:hover {
+            background: #1565c0;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Jogos Online</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
 
-<header>
-  <h1>Jogos Online</h1>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="artigo1.html">Artigo 1</a>
-    <a href="artigo2.html">Artigo 2</a>
-    <a href="artigo3.html">Artigo 3</a>
-  </nav>
-</header>
+    <main>
+        <div class="container">
+            <!-- Artigo 1 -->
+            <div class="card">
+                <img src="https://picsum.photos/600/400?random=1" alt="Jogo 1">
+                <div class="card-content">
+                    <h2>Jogo de Aventura</h2>
+                    <p>Explore mundos incríveis e enfrente desafios neste jogo emocionante.</p>
+                </div>
+                <a href="artigo1.html" class="btn">Ler mais</a>
+            </div>
 
-<main>
-  <div class="container">
+            <!-- Artigo 2 -->
+            <div class="card">
+                <img src="https://picsum.photos/600/400?random=2" alt="Jogo 2">
+                <div class="card-content">
+                    <h2>Corrida Radical</h2>
+                    <p>Velocidade e adrenalina se encontram neste jogo de corrida eletrizante.</p>
+                </div>
+                <a href="artigo2.html" class="btn">Ler mais</a>
+            </div>
 
-    <!-- Artigo 1 (imagem temporária) -->
-    <div class="card">
-      <img src="https://picsum.photos/seed/game1/800/400" alt="História dos Videogames">
-      <div class="card-content">
-        <h2>A História dos Videogames</h2>
-        <p>Uma jornada pela evolução dos consoles e jogos mais marcantes da história.</p>
-      </div>
-      <a href="artigo1.html" class="btn">Ler mais</a>
-    </div>
-
-    <!-- Artigo 2 (imagem temporária) -->
-    <div class="card">
-      <img src="https://picsum.photos/seed/game2/800/400" alt="Evolução dos Consoles">
-      <div class="card-content">
-        <h2>Evolução dos Consoles</h2>
-        <p>Como os consoles mudaram com o passar das décadas e o impacto dessas mudanças.</p>
-      </div>
-      <a href="artigo2.html" class="btn">Ler mais</a>
-    </div>
-
-    <!-- Artigo 3 (imagem temporária) -->
-    <div class="card">
-      <img src="https://picsum.photos/seed/game3/800/400" alt="Jogos Populares">
-      <div class="card-content">
-        <h2>Os Jogos Mais Jogados em 2025</h2>
-        <p>Veja quais títulos estão dominando o cenário mundial este ano.</p>
-      </div>
-      <a href="artigo3.html" class="btn">Ler mais</a>
-    </div>
-
-  </div>
-</main>
-
-<footer>
-  © <span id="year"></span> Jogos.com.br — Todos os direitos reservados
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+            <!-- Artigo 3 -->
+            <div class="card">
+                <img src="https://picsum.photos/600/400?random=3" alt="Jogo 3">
+                <div class="card-content">
+                    <h2>Estratégia Total</h2>
+                    <p>Planeje seus movimentos e conquiste territórios neste jogo de estratégia.</p>
+                </div>
+                <a href="artigo3.html" class="btn">Ler mais</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
