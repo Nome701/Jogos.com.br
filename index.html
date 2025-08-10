@@ -1,128 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogos.com.br - Diversão e Entretenimento Online</title>
-    <meta name="description" content="Jogos.com.br é um site confiável com conteúdos, dicas e notícias sobre jogos online.">
-    <meta name="keywords" content="jogos, jogos online, diversão, entretenimento, games">
-    <meta name="author" content="Jogos.com.br">
-
-    <!-- Estilos básicos -->
+    <title>Jogos Online</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
-            color: #333;
+            background-color: #f4f4f4;
         }
+
         header {
-            background: #0077cc;
+            background-color: #1e88e5;
             color: white;
             padding: 20px;
             text-align: center;
         }
-        nav {
-            background: #005fa3;
-            padding: 10px;
-            text-align: center;
+
+        header h1 {
+            margin: 0;
         }
+
+        nav {
+            margin-top: 10px;
+        }
+
         nav a {
             color: white;
-            text-decoration: none;
             margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
-        main {
-            max-width: 900px;
-            margin: auto;
-            background: white;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
-        h1, h2 {
-            color: #0077cc;
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        article {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
         }
-        footer {
-            text-align: center;
+
+        .card-content {
             padding: 15px;
-            background: #222;
+            flex-grow: 1;
+        }
+
+        .card-content h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: #1e88e5;
             color: white;
-            margin-top: 20px;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .btn:hover {
+            background: #1565c0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Jogos.com.br</h1>
-        <p>O melhor conteúdo sobre jogos online e entretenimento</p>
-    </header>
 
+<header>
+    <h1>Jogos Online</h1>
     <nav>
-        <a href="#">Início</a>
-        <a href="#">Notícias</a>
-        <a href="#">Dicas</a>
-        <a href="#">Contato</a>
+        <a href="index.html">Início</a>
+        <a href="artigo1.html">Artigo 1</a>
+        <a href="artigo2.html">Artigo 2</a>
+        <a href="artigo3.html">Artigo 3</a>
     </nav>
+</header>
 
-    <main>
-        <article>
-            <h2>Bem-vindo ao Jogos.com.br</h2>
-            <p>Aqui você encontra artigos, dicas e novidades sobre o mundo dos jogos online. Nosso objetivo é trazer sempre conteúdo de qualidade para você.</p>
-        </article>
-
-        <article>
-            <h2>Notícia de Destaque</h2>
-            <p>Em breve lançaremos uma série de guias para ajudar você a se destacar nos principais jogos do momento. Fique ligado!</p>
-        </article>
-    </main>
-
-    <footer>
-        <p>© 2025 Jogos.com.br - Todos os direitos reservados.</p>
-    </footer>
-</b<!-- Seção de artigos -->
-<section style="padding: 20px; max-width: 800px; margin: auto;">
-
-  <h1 style="text-align: center; color: #007BFF;">Últimos Artigos</h1>
-
-  <!-- Artigo 1 -->
-  <article style="border-bottom: 1px solid #ccc; padding: 15px 0;">
-    <h2 style="color: #007BFF;">Guia Completo: Como Melhorar no Jogo X</h2>
-    <p>
-      Descubra as melhores estratégias e truques para dominar o Jogo X e se destacar nas partidas.
-    </p>
-    <a href="artigo1.html" style="color: white; background: #007BFF; padding: 8px 12px; text-decoration: none; border-radius: 5px;">
-      Ler mais
-    </a>
-  </article>
-
-  <!-- Artigo 2 -->
-  <article style="border-bottom: 1px solid #ccc; padding: 15px 0;">
-    <h2 style="color: #007BFF;">Top 5 Jogos Online Mais Jogados em 2025</h2>
-    <p>
-      Veja a lista atualizada com os jogos online mais populares e descubra porque eles fazem tanto sucesso.
-    </p>
-    <a href="artigo2.html" style="color: white; background: #007BFF; padding: 8px 12px; text-decoration: none; border-radius: 5px;">
-      Ler mais
-    </a>
-  </article>
-
-  <!-- Artigo 3 -->
-  <article style="padding: 15px 0;">
-    <h2 style="color: #007BFF;">Dicas para Economizar em Compras no Jogo</h2>
-    <p>
-      Aprenda como aproveitar promoções e gastar menos ao comprar itens virtuais para seus jogos favoritos.
-    </p>
-    <a href="artigo3.html" style="color: white; background: #007BFF; padding: 8px 12px; text-decoration: none; border-radius: 5px;">
-      Ler mais
-    </a>
-  </article>
-
-</section>ody><!--
+<main>
+    <div class="container">
+        <div class="card">
+            <img src="https://i
