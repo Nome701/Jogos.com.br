@@ -1,28 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site no GitHub Pages</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            color: white;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 3em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meu Site — Seu Nome</title>
+  <meta name="description" content="Um site simples publicado no GitHub Pages." />
+  <!-- Se no futuro usar AdSense, cole o script do AdSense aqui (antes do </head>) -->
+  <style>
+    :root{
+      --bg1:#4facfe;
+      --bg2:#00f2fe;
+      --text:#0b1220;
+      --card:#ffffffaa;
+      --accent:#0c7bff;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background: linear-gradient(180deg,var(--bg1),var(--bg2));
+      min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px;
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      color:white;
+      font-weight:700;
+      font-size:1.05rem;
+      text-decoration:none;
+    }
+    .brand .logo{
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,#fff5,#ffffff33);
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent)
+    }
+
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{
+      color:white;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:10px;font-size:0.95rem;
+      opacity:0.95
+    }
+
+    /* Hero */
+    .hero{
+      text-align:center;
+      padding:48px 20px 36px;
+      max-width:920px;
+      margin:0 auto;
+    }
+    .hero h1{
+      margin:12px 0 6px;
+      font-size:clamp(2rem,8vw,3.6rem);
+      line-height:1;
+      color:white;
+      text-shadow:0 2px 18px #00000022;
+    }
+    .hero p{
+      margin:14px 0 22px;color:#ffffffdd;font-size:1.05rem;
+    }
+    .buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{
+      background:rgba(255,255,255,0.12);
+      color:white;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.06);
+      backdrop-filter:blur(4px)
+    }
+    .btn.secondary{background:#fff;color:var(--text)}
+
+    /* Cards / conteúdo */
+    .content{
+      max-width:1100px;margin:28px auto;padding:0 18px 80px;display:grid;gap:18px;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      align-items:start;
+    }
+    .card{
+      background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px #00000018;
+      color:var(--text);
+    }
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;font-size:0.95rem;color:#1a2430cc}
+
+    footer{
+      padding:28px 18px;color:white;text-align:center;background:linear-gradient(180deg,transparent,#00000010);
+    }
+
+    /* responsividade simples */
+    @media (max-width:520px){
+      header{padding:14px}
+      .brand{font-size:0.98rem}
+      .hero{padding:40px 14px}
+    }
+  </style>
 </head>
 <body>
-    <h1>🚀 Meu Site Está no Ar!</h1>
-    <p>Esse site foi publicado usando o <strong>GitHub Pages</strong>.</p>
-    <p>Agora é só editar o <code>index.html</code> para mudar o conteúdo.</p>
+  <header>
+    <a class="brand" href="#">
+      <div class="logo">S</div>
+      MeuSite
+    </a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Apresentação">
+      <h1>🚀 Meu Site Está No Ar!</h1>
+      <p>Bem-vindo — este é um template simples e rápido para você publicar no GitHub Pages. Edite textos, adicione imagens e personalize cores.</p>
+      <div class="buttons">
+        <a class="btn" href="#sobre">Saiba Mais</a>
+        <a class="btn secondary" href="#contato">Entrar em Contato</a>
+      </div>
+    </section>
+
+    <section class="content" id="cards">
+      <article class="card" id="sobre">
+        <h3>Sobre este site</h3>
+        <p>Conte aqui o objetivo do seu site: divulgação, portfólio, blog ou link para redes sociais. Edite este texto no index.html.</p>
+      </article>
+
+      <article class="card" id="servicos">
+        <h3>Serviços / Links</h3>
+        <p>Coloque links para Instagram, WhatsApp, YouTube, posts ou páginas internas. Use <code>&lt;a href=\"https://...\"&gt;</code>.</p>
+      </article>
+
+      <article class="card" id="contato">
+        <h3>Contato</h3>
+        <p>Coloque seu e-mail, telefone ou formulário. Ex.: <strong>seu@email.com</strong></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> — Seu Nome / MeuSite</div>
+    <small style="opacity:0.9">Publicado com GitHub Pages</small>
+  </footer>
+
+  <script>
+    // atualiza ano do rodapé automaticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
