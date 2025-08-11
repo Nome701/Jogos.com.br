@@ -1,140 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jogos Online</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos.com.br</title>
     <style>
-        :root {
-            --primary: #1080e5;
-            --card-bg: #fff;
-            --page-bg: #f4f4f4;
-            --text: #333;
-        }
-        * {
-            box-sizing: border-box;
-        }
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: var(--page-bg);
-            color: var(--text);
-            -webkit-font-smoothing: antialiased;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
         }
         header {
-            background: var(--primary);
-            color: #fff;
+            background-color: #222;
+            color: white;
             padding: 20px;
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 8px;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 12px;
-        }
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
         .card {
-            background: var(--card-bg);
-            border-radius: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 15px;
+            width: 300px;
             overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
             display: flex;
             flex-direction: column;
         }
         .card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
-            display: block;
         }
-        .card-content {
-            padding: 15px;
-            flex: 1;
+        .card h3 {
+            margin: 15px;
+            font-size: 18px;
         }
-        .card-content h2 {
-            margin: 0 0 10px;
-            font-size: 1.15rem;
-            color: #111;
-        }
-        .card-content p {
-            margin: 0 0 15px;
+        .card p {
+            margin: 0 15px 15px;
+            font-size: 14px;
             color: #555;
-            line-height: 1.4;
         }
         .btn {
             display: block;
             text-align: center;
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 10px;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
             text-decoration: none;
-            font-weight: 700;
-            border-radius: 0 0 10px 10px;
+            border-radius: 0 0 8px 8px;
+            transition: background-color 0.3s;
         }
         .btn:hover {
-            background: #1565c0;
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Jogos Online</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-        </nav>
-    </header>
 
-    <main>
-        <div class="container">
-            <!-- Artigo 1 -->
-            <div class="card">
-                <img src="https://picsum.photos/600/400?random=1" alt="Jogo 1">
-                <div class="card-content">
-                    <h2>Jogo de Aventura</h2>
-                    <p>Explore mundos incríveis e enfrente desafios neste jogo emocionante.</p>
-                </div>
-                <a href="artigo1.html" class="btn">Ler mais</a>
-            </div>
+<header>
+    <h1>Jogos.com.br</h1>
+    <p>Notícias, análises e curiosidades sobre o mundo dos games</p>
+</header>
 
-            <!-- Artigo 2 -->
-            <div class="card">
-                <img src="https://picsum.photos/600/400?random=2" alt="Jogo 2">
-                <div class="card-content">
-                    <h2>Corrida Radical</h2>
-                    <p>Velocidade e adrenalina se encontram neste jogo de corrida eletrizante.</p>
-                </div>
-                <a href="artigo2.html" class="btn">Ler mais</a>
-            </div>
+<div class="container">
+    <!-- 30 Cards -->
+    <!-- Eu criei nomes genéricos para títulos e descrições -->
+    <!-- Você pode mudar depois -->
+    <!-- Cada card aponta para artigo1.html até artigo30.html -->
 
-            <!-- Artigo 3 -->
-            <div class="card">
-                <img src="https://picsum.photos/600/400?random=3" alt="Jogo 3">
-                <div class="card-content">
-                    <h2>Estratégia Total</h2>
-                    <p>Planeje seus movimentos e conquiste territórios neste jogo de estratégia.</p>
-                </div>
-                <a href="artigo3.html" class="btn">Ler mais</a>
-            </div>
-        </div>
-    </main>
+    <!-- Cards gerados automaticamente -->
+    <!-- Início -->
+    ${Array.from({ length: 30 }, (_, i) => `
+    <div class="card">
+        <img src="https://picsum.photos/300/200?random=${i+1}" alt="Imagem do artigo ${i+1}">
+        <h3>Artigo ${i+1} - Título sobre Jogos</h3>
+        <p>Uma prévia do conteúdo deste artigo incrível sobre o mundo dos games. Clique para ler mais!</p>
+        <a href="artigo${i+1}.html" class="btn">Ler mais</a>
+    </div>
+    `).join('')}
+    <!-- Fim -->
+</div>
+
 </body>
 </html>
