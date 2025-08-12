@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde e Bem-Estar</title>
+    <meta name="description" content="Artigos e informações para melhorar sua saúde e qualidade de vida.">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
+        header { background: #007BFF; color: white; padding: 20px; text-align: center; }
+        nav { background: #0056b3; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width: 900px; margin: auto; padding: 20px; background: white; }
+        footer { background: #0056b3; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+        h1, h2 { color: #007BFF; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Saúde e Bem-Estar</h1>
+    <p>Informações confiáveis para melhorar sua qualidade de vida</p>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <a href="privacidade.html">Privacidade</a>
+    <a href="termos.html">Termos</a>
+</nav>
+
+<main>
+    <h2>A Importância do Sono para a Saúde</h2>
+    <p>Dormir bem é fundamental para manter o corpo e a mente funcionando corretamente. Durante o sono, o organismo realiza a reparação de tecidos, consolida memórias e regula hormônios essenciais para o equilíbrio físico e emocional.</p>
+    <p>Além disso, a falta de sono pode causar queda de produtividade, enfraquecimento do sistema imunológico e aumento do risco de doenças crônicas. Por isso, é importante criar uma rotina de sono saudável, evitando estímulos antes de dormir e mantendo horários regulares.</p>
+    <p><strong>Dica:</strong> tente dormir entre 7 e 8 horas por noite e crie um ambiente tranquilo no quarto.</p>
+</main>
+
+<footer>
+    <p>&copy; 2025 Saúde e Bem-Estar - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
