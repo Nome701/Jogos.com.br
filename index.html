@@ -869,5 +869,48 @@
     // atualiza ano do rodapé automaticamente
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+    <!-- Avaliação com Estrelas -->
+<div class="star-rating" id="rating">
+  <span class="star" data-value="5">★</span>
+  <span class="star" data-value="4">★</span>
+  <span class="star" data-value="3">★</span>
+  <span class="star" data-value="2">★</span>
+  <span class="star" data-value="1">★</span>
+</div>
+<p id="rating-value"></p>
+
+<style>
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse; /* para mostrar 5 primeiro */
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .star {
+    color: gray;
+    transition: color 0.2s;
+  }
+  .star:hover,
+  .star:hover ~ .star,
+  .star.selected,
+  .star.selected ~ .star {
+    color: gold;
+  }
+</style>
+
+<script>
+  const stars = document.querySelectorAll('.star');
+  const output = document.getElementById('rating-value');
+
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const value = star.getAttribute('data-value');
+      output.textContent = `Você avaliou com ${value} estrelas!`;
+
+      stars.forEach(s => s.classList.remove('selected'));
+      star.classList.add('selected');
+    });
+  });
+</script>
 </body>
 </html>
